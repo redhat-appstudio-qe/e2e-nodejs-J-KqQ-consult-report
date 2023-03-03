@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-uiik
+  namespace: e2e-demos-ovfz-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:68085f601c56301475b9eccb5e66e2fb504b53b68003c29feb2e68ae9f968164
+        name: my-nodejs
+        resources: {}
+status: {}
